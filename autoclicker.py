@@ -116,7 +116,7 @@ def _post_key(hwnd: int, vk: int, ch: str) -> None:
     believes it is focused, which makes key delivery reliable for most
     desktop apps even when they are not the foreground window.
     """
-    sc  = win32api.MapVirtualKey(vk, 0)
+    sc  = ctypes.windll.user32.MapVirtualKeyW(vk, 0)
     dn  = (sc << 16) | 1
     up  = (sc << 16) | 0xC0000001
 

@@ -4,7 +4,16 @@ A simple tool that automatically presses keys for you — on repeat, forever, in
 
 ---
 
-## First-Time Setup (do this once)
+## Option A — Just use the EXE (no Python needed)
+
+1. Download **`AutoClicker.exe`** from the `dist` folder
+2. Double-click it to run — that's it
+
+> Windows Defender or your antivirus may show a warning the first time. This is a common false positive with standalone Python executables. Click **"More info" → "Run anyway"** to proceed.
+
+---
+
+## Option B — Run from source (requires Python)
 
 You need Python installed. If you don't have it:
 
@@ -20,9 +29,7 @@ pip install pynput pywin32
 
 That's it. You only do this once.
 
----
-
-## How to Run
+### How to Run
 
 1. Open the `autoclicker` folder
 2. Double-click **`autoclicker.py`**
@@ -100,7 +107,13 @@ Leave it on **Active window** if you just want to click into an app yourself and
 
 ## Troubleshooting
 
-**Double-clicking the file opens Notepad instead of running it**
+**Windows blocked the EXE / "Windows protected your PC" warning**
+→ Click **"More info"** → **"Run anyway"**. This is a false positive common to all self-contained Python executables.
+
+**Antivirus quarantined the EXE**
+→ Add an exclusion for the file in your antivirus settings and re-download it.
+
+**Double-clicking the .py file opens Notepad instead of running it**
 → Right-click → Open with → Choose another app → Python
 
 **"pip is not recognized" error**
@@ -110,4 +123,4 @@ Leave it on **Active window** if you just want to click into an app yourself and
 → Some games with anti-cheat block automated input. Try using the autoclicker in Active Window mode and keep the game focused.
 
 **The window I want isn't in the dropdown**
-→ Click ⟳ Refresh. If it still doesn't appear, try running the autoclicker as Administrator (right-click `autoclicker.py` → Run as administrator).
+→ Click ⟳ Refresh. If it still doesn't appear, try running the autoclicker as Administrator (right-click → Run as administrator).
